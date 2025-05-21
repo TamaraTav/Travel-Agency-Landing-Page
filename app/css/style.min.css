@@ -147,7 +147,9 @@ body {
   position: relative;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  background: red !important;
+  font-weight: 500;
+  color: #5E6282;
+  background: #FFFFFF;
 }
 
 *,

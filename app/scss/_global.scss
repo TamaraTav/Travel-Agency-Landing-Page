@@ -2,7 +2,9 @@ body {
     position: relative;
     font-family: $poppins;
     font-size: 16px;
-    background: red !important;
+    font-weight: 500;
+    color: $lightBlack;
+    background: $white
 }
 
 *,
