@@ -123,5 +123,62 @@
     display: none;
   }
 }
+.header__language {
+  position: relative;
+
+  &-select {
+    display: none;
+  }
+
+  .select-options {
+    display: none;
+  }
+
+  .select-styled {
+    padding-right: 17px;
+    position: relative;
+    color: $black;
+    font-size: 17px;
+    line-height: 25px;
+    cursor: pointer;
+
+    &.active {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 10px;
+      height: 6px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      background: url(../img/arrow-down.svg);
+      transition: all .3s;
+    }
+  }
+
+  .select-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    list-style: none;
+
+    li {
+      cursor: pointer;
+    }
+  }
+
+  @media(max-width: 1050px) {
+    display: none;
+  }
+}
+
 
 
