@@ -6,5 +6,71 @@
 
 
 /*********** Header ***********/
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
 
-@import "media";
+  padding: 48px 0;
+
+  transition: all .5s;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 25px 0;
+
+    background: $white;
+    z-index: 999;
+    box-shadow: 0 1px 30px rgba($lightBlack, .2);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  @media(max-width: 1050px) {
+    &__inner {
+      justify-content: space-between;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+
+  &__link {
+    position: relative;
+    margin: 0 25px;
+
+    color: $black;
+    text-decoration: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(100% + 4px);
+      height: 0;
+
+      background: $black;
+      opacity: 0;
+      transition: all .3s;
+    }
+
+    &:hover::before {
+      height: 3px;
+      opacity: 1;
+    }
+  }
+  @media(max-width: 1050px) {
+    display: none;
+  }
+}
+
