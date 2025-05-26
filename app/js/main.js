@@ -44,5 +44,18 @@ $('#header__language, #m-header__language').each(function(){
         $styledSelect.removeClass('active');
         $list.hide();
     });
-
 });
+
+$('.testimonials__slider').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll:1,
+    vertical: true,
+    prevArrow:"<img class='testimonials__slider-arrow testimonials__slider-arrow-prev' src='img/slider-arrow-up.svg'>",
+    nextArrow:"<img class='testimonials__slider-arrow testimonials__slider-arrow-next' src='img/slider-arrow-down.svg'>",
+    dots: true,
+});
+
+let header = $('.header'),
+    headerH = header.innerHeight(),
+    scrollOffset = $(window).scrollTop();

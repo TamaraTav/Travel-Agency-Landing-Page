@@ -495,8 +495,6 @@
 }
 
 
-
-
 /*********** Steps ***********/
 
 .steps {
@@ -597,6 +595,157 @@
     img {
       box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
       border-radius: 26px;
+    }
+  }
+}
+
+
+
+
+
+/*********** Testimonials ***********/
+
+.testimonials {
+  margin-bottom: 140px;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .head {
+    padding: 12px 87px 0 45px;
+    width: 50%;
+    align-items: flex-start;
+  }
+}
+
+.testimonials__slider {
+  width: 595px;
+
+  &.slick-slider {
+    position: static;
+  }
+
+  .slick-list {
+    padding: 35px 50px 80px 40px;
+    height: 415px !important;
+    overflow-x: visible;
+  }
+
+  .slick-slide {
+    position: relative;
+    z-index: 9;
+    opacity: 0;
+    transition: all .5s;
+  }
+
+  .slick-active {
+    z-index: 99;
+    opacity: 1;
+  }
+
+  .slick-active + .slick-slide {
+    transform: translate(50px, -160px);
+    opacity: 1;
+
+    .testimonials__slide-content {
+      background: transparent;
+      border: 2px solid #F7F7F7;
+      box-shadow: none;
+    }
+  }
+
+  &-arrow {
+    position: absolute;
+    right: -66px;
+    top: 50%;
+    cursor: pointer;
+
+    &.slick-disabled {
+      opacity: .3;
+    }
+
+    &-prev {
+      transform: translateY(-29px)
+    }
+
+    &-next {
+      transform: translateY(29px)
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    left: 45px;
+    bottom: 90px;
+    display: flex;
+    list-style: none;
+
+    li {
+      width: 12px;
+      height: 12px;
+      margin-right: 26px;
+      background: #E5E5E5;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &.slick-active {
+        background: $black;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+}
+
+.testimonials__slide {
+
+  height: 245px;
+  position: relative;
+
+  &-author {
+    position: absolute;
+    top: -34px;
+    left: -37px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  &-content {
+    padding: 28px 34px 34px;
+    display: flex;
+    flex-direction: column;
+
+    background: #FFFFFF;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+    border-radius: 10px;
+    transition: all .5s;
+
+    &-desc {
+      margin-bottom: 34px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 32px;
+    }
+
+    &-name {
+      margin-bottom: 5px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    &-city {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
     }
   }
 }
