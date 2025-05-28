@@ -1092,3 +1092,103 @@ body {
       -ms-transform: scale(1.1);
           transform: scale(1.1);
 }
+
+/*********** Footer ***********/
+.footer {
+  padding-bottom: 80px;
+}
+
+.footer__row {
+  margin-bottom: 84px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.footer__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer__col--1 {
+  max-width: 204px;
+}
+.footer__logo {
+  margin-bottom: 20px;
+}
+.footer__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+}
+.footer__title {
+  margin-bottom: 34px;
+  font-weight: bold;
+  font-size: 21px;
+  color: #14183E;
+}
+.footer__link {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #5E6282;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__socials {
+  margin-bottom: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__socials-link {
+  margin: 0 12px;
+  width: 41px;
+  height: 41px;
+  text-decoration: none;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.footer__socials-link:nth-child(2) {
+  width: 45px;
+  height: 45px;
+}
+.footer__socials-link:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.footer__apps-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 20px;
+}
+.footer__apps-link {
+  text-decoration: none;
+}
+.footer__apps-link + .footer__apps-link {
+  margin-left: 3px;
+}
+.footer__copy {
+  font-weight: 500;
+  text-align: center;
+  font-weight: 500;
+}
