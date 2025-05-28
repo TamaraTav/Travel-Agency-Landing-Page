@@ -151,6 +151,9 @@ body {
   color: #5E6282;
   background: #FFFFFF;
 }
+body.no-scroll {
+  overflow-y: hidden;
+}
 
 *,
 *:before,
@@ -164,7 +167,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1191px;
+  max-width: 1190px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -194,6 +197,41 @@ body {
   color: #14183E;
   font-family: "Volkhov", Times, serif;
   text-transform: capitalize;
+}
+@media (max-width: 1200px) {
+  .head_subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .head__title {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 1050px) {
+  .head {
+    text-align: center;
+  }
+}
+@media (max-width: 770px) {
+  .head_subtitle {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .head__title {
+    font-size: 32px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 575px) {
+  .head_subtitle {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .head__title {
+    font-size: 28px;
+    line-height: 42px;
+  }
 }
 
 /*********** Header ***********/

@@ -4,7 +4,11 @@ body {
     font-size: 16px;
     font-weight: 500;
     color: $lightBlack;
-    background: $white
+    background: $white;
+
+    &.no-scroll {
+        overflow-y: hidden;
+    }
 }
 
 *,
@@ -18,7 +22,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1191px;
+    max-width: 1190px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -43,5 +47,45 @@ body {
         color: $black;
         font-family: $volkhov;
         text-transform: capitalize;
+    }
+
+    @media(max-width: 1200px) {
+        &_subtitle {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        &__title {
+            font-size: 40px;
+            line-height: 60px;
+        }
+    }
+
+    @media(max-width: 1050px) {
+        text-align: center;
+    }
+
+    @media(max-width: 770px) {
+        &_subtitle {
+            font-size: 14px;
+            line-height: 21px;
+        }
+
+        &__title {
+            font-size: 32px;
+            line-height: 48px;
+        }
+    }
+
+    @media(max-width: 575px) {
+        &_subtitle {
+            font-size: 14px;
+            line-height: 21px;
+        }
+
+        &__title {
+            font-size: 28px;
+            line-height: 42px;
+        }
     }
 }
