@@ -44,6 +44,7 @@ $('#header__language, #m-header__language').each(function(){
         $styledSelect.removeClass('active');
         $list.hide();
     });
+
 });
 
 $('.testimonials__slider').slick({
@@ -68,6 +69,7 @@ $(window).on('scroll',function(){
     scrollOffset = $(window).scrollTop();
     checkScroll(scrollOffset)
 });
+
 function checkScroll(scrollOffset){
     if(scrollOffset >= headerH){
         header.addClass('fixed');
@@ -89,4 +91,10 @@ $('.menu__link').click(function(event){
     $('html, body').animate({
         scrollTop: blockOffset
     },1000)
+})
+
+$('.header__burger').click(function(){
+    $(this).toggleClass('active');
+    $('.m-menu').toggleClass('active');
+    $('body').toggleClass('no-scroll');
 })
