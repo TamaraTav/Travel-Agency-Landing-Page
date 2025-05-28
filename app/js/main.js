@@ -59,3 +59,34 @@ $('.testimonials__slider').slick({
 let header = $('.header'),
     headerH = header.innerHeight(),
     scrollOffset = $(window).scrollTop();
+
+// fixed header
+
+checkScroll(scrollOffset)
+
+$(window).on('scroll',function(){
+    scrollOffset = $(window).scrollTop();
+    checkScroll(scrollOffset)
+});
+function checkScroll(scrollOffset){
+    if(scrollOffset >= headerH){
+        header.addClass('fixed');
+    } else {
+        header.removeClass('fixed');
+    }
+}
+
+$('.menu__link').click(function(event){
+    event.preventDefault();
+
+    $('.m-menu').removeClass('active');
+    $('.header__burger').removeClass('active');
+    $('body').removeClass('no-scroll');
+
+    let $this = $(this),
+        blockId = $this.data('scroll');
+    blockOffset = $(blockId).offset().top - headerH;
+    $('html, body').animate({
+        scrollTop: blockOffset
+    },1000)
+})
