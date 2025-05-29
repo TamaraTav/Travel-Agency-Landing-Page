@@ -830,6 +830,30 @@
       font-size: 16px;
     }
   }
+
+  @media(max-width: 1050px) {
+    padding: 0 15px;
+    margin-bottom: 50px;
+    width: 100%;
+
+    .head {
+      align-items: center;
+    }
+
+    &-items {
+      max-width: 100%;
+    }
+
+    &-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      &-img {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .steps__img {
@@ -871,7 +895,69 @@
       border-radius: 26px;
     }
   }
+
+  @media(max-width:1266px) {
+    &-small {
+      right: 58px;
+      bottom: -100px;
+    }
+  }
+
+  @media(max-width: 1050px) {
+    padding: 0;
+    width: 100%;
+
+    &-big {
+      display: flex;
+      justify-content: center;
+
+      &:before {
+        top: 40px;
+        right: 50%;
+        transform: translateX(80%);
+      }
+    }
+
+    &-small {
+      right: 50%;
+      transform: translateX(100%);
+    }
+  }
+
+  @media(max-width: 590px) {
+    &-big {
+      &:before {
+        transform: translateX(50%);
+      }
+    }
+
+    &-small {
+      bottom: -120px;
+      transform: translateX(50%);
+    }
+  }
+
+  @media(max-width:420px) {
+    padding: 0 20px;
+
+    &-big {
+      &::before {
+        width: 165px;
+        height: 165px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    &-small {
+      bottom: -27px;
+    }
+  }
 }
+
+
 
 
 
