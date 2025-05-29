@@ -958,6 +958,29 @@ body.no-scroll {
         flex-wrap: wrap;
   }
 }
+@media (max-width: 650px) {
+  .dests__item {
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .dests__item-content {
+    padding: 15px;
+    grid-template-columns: 1fr;
+  }
+  .dests__item-time {
+    grid-column: 1;
+  }
+  .dests__item-price {
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .dests__item-title {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
 
 /*********** Steps ***********/
 .steps {
