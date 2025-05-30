@@ -1510,6 +1510,20 @@ body.no-scroll {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
+@media (max-width: 920px) {
+  .partners__inner {
+    overflow-x: auto;
+  }
+  .partners__item {
+    width: auto;
+    margin: 0 20px;
+  }
+}
+@media (max-width: 575px) {
+  .partners {
+    margin-bottom: 60px;
+  }
+}
 
 /*********** Form ***********/
 .form {
@@ -1550,6 +1564,69 @@ body.no-scroll {
   right: -100px;
   bottom: -70px;
   z-index: -1;
+}
+@media (max-width: 1380px) {
+  .form__pluses {
+    display: none;
+  }
+}
+@media (max-width: 1225px) {
+  .form__inner {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 1100px) {
+  .form__inner {
+    padding: 40px 80px;
+  }
+  .form__title {
+    margin-bottom: 45px;
+    font-size: 24px;
+    line-height: 42px;
+  }
+}
+@media (max-width: 770px) {
+  .form__inner {
+    border-radius: 20px;
+    margin: 0 10px;
+    padding: 30px 40px;
+  }
+  .form__plan {
+    width: 40px;
+    height: 40px;
+    right: -10px;
+    top: -5px;
+  }
+  .form__plan img {
+    width: 100%;
+    height: 100%;
+  }
+  .form__title {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .form__lines-1 {
+    width: 200px;
+  }
+  .form__lines-2 {
+    width: 200px;
+  }
+}
+@media (max-width: 575px) {
+  .form {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 400px) {
+  .form__inner {
+    margin: 0;
+    padding: 40px 14px;
+  }
+  .form__title {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 25px;
+  }
 }
 
 .form__form {
@@ -1617,6 +1694,27 @@ body.no-scroll {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
+}
+@media (max-width: 1100px) {
+  .form__form-button {
+    padding: 17px 30px 18px;
+    font-size: 14px;
+  }
+  .form__form-input-wrapper {
+    padding: 20px 30px 17px;
+  }
+}
+@media (max-width: 770px) {
+  .form__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form__form-button {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
 /*********** Footer ***********/
