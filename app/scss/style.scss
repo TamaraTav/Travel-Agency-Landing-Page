@@ -1285,7 +1285,6 @@
 
 
 
-
 /*********** Form ***********/
 
 .form {
@@ -1486,8 +1485,6 @@
 
 
 
-
-
 /*********** Footer ***********/
 
 .footer {
@@ -1579,7 +1576,7 @@
     &-link {
       text-decoration: none;
 
-      & +& {
+      &+& {
         margin-left: 3px;
       }
     }
@@ -1590,8 +1587,141 @@
     text-align: center;
     font-weight: 500;
   }
+
+  @media(max-width: 1100px) {
+    &__row {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    &__col {
+      &:nth-child(1) {
+        padding-right: 20px;
+        max-width: none;
+        width: 50%;
+        margin-bottom: 40px;
+        order: 1;
+      }
+
+      &:nth-child(2) {
+        width: 33%;
+        order: 3;
+      }
+
+      &:nth-child(3) {
+        width: 33%;
+        order: 4;
+      }
+
+      &:nth-child(4) {
+        width: 33%;
+        order: 5;
+      }
+
+      &:nth-child(5) {
+        width: 50%;
+        margin-bottom: 40px;
+        order: 2;
+        text-align: center;
+      }
+    }
+    &__socials{
+      justify-content: center;
+    }
+  }
+
+  @media(max-width: 575px) {
+    padding-bottom: 40px;
+
+    &__title {
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__link {
+      margin-bottom: 7px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &__row {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media(max-width: 510px) {
+    &__col {
+      &:nth-child(1) {
+        padding-right: 0;
+        width: 100%;
+        order: 1;
+      }
+
+      &:nth-child(2) {
+        width: 33%;
+        order: 2;
+      }
+
+      &:nth-child(3) {
+        width: 33%;
+        order: 3;
+      }
+
+      &:nth-child(4) {
+        width: 33%;
+        order: 4;
+      }
+
+      &:nth-child(5) {
+        width: 100%;
+        margin: 40px 0 0;
+        order: 5;
+      }
+    }
+
+    &__socials-link {
+      margin: 0 15px 0 0;
+    }
+  }
+
+  @media(max-width: 410px) {
+    &__col {
+      &:nth-child(1) {
+        padding-right: 0;
+        margin-bottom: 30px;
+        width: 100%;
+        order: 1;
+      }
+
+      &:nth-child(2) {
+        width: 100%;
+        margin-bottom: 30px;
+        order: 2;
+      }
+
+      &:nth-child(3) {
+        width: 100%;
+        margin-bottom: 30px;
+        order: 3;
+      }
+
+      &:nth-child(4) {
+        width: 100%;
+        margin-bottom: 30px;
+        order: 4;
+      }
+
+      &:nth-child(5) {
+        width: 100%;
+        margin: 0;
+        order: 5;
+      }
+    }
+  }
 }
 
+@import "media";
 
 
 
